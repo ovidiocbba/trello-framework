@@ -57,6 +57,9 @@ public class Connection {
    * @return the Request Specification instance.
    */
   public RequestSpecification getRequestSpecification() {
+    /* Workaround for Java JDK 8*/
+//    System.setProperty ("javax.net.ssl.trustStore", "NUL");
+//    System.setProperty ("javax.net.ssl.trustStoreType", "Windows-ROOT");
     return requestSpecification.filter(new RestAssuredRequestFilter());
   }
 }
