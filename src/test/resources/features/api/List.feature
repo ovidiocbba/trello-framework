@@ -1,7 +1,7 @@
 @Regression
 Feature: List
 
-  @TC-00005 @Smoke @Functional @CreateWorkspace @CreateBoard @DeleteWorkspace
+  @TC-00005 @Smoke @Functional @CreateWorkspace @CreateBoard @DeleteBoard @DeleteWorkspace
   Scenario: Verify that a list can be created in a Board
     When a POST request to "/boards/[Board.id]/lists" with the following values:
       | name | AUT List |
@@ -11,7 +11,7 @@ Feature: List
         | name   | AUT List |
         | closed | false    |
 
-  @TC-00006 @Functional @CreateWorkspace @CreateBoard @CreateList @DeleteWorkspace
+  @TC-00006 @Functional @CreateWorkspace @CreateBoard @CreateList @DeleteBoard @DeleteWorkspace
   Scenario: Verify that a list can be archived
     When a PUT request to "/lists/[List.id]/closed" with the following values:
       | value | true |
