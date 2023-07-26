@@ -16,6 +16,7 @@ public class HookOrder {
   // [OM] Order of execution for the '@After' hooks.
   // This runs in decrements order, means apposite of @Before.
   public static final int SCREENSHOT = 99;
+  public static final int DELETE_BOARD = 20;
   public static final int DELETE_WORKSPACE = 10;
   public static final int DISPOSE_ALL_ACTIVE_WINDOWS = 1;
 }
