@@ -87,8 +87,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             },
             {
@@ -106,8 +105,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             },
             {
@@ -125,8 +123,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             },
             {
@@ -144,8 +141,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             },
             {
@@ -163,8 +159,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             },
             {
@@ -182,8 +177,7 @@
               },
               "required": [
                 "viewType",
-                "enabled",
-                "_id"
+                "enabled"
               ]
             }
           ]
