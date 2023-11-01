@@ -44,8 +44,8 @@ allure {
 
 sonarqube {
     properties {
-        property "sonar.projectKey", "ovidiomirandaencora_trello-framework"
-        property "sonar.organization", "ovidiomirandaencora"
+        property "sonar.projectKey", "ovidiocbba_trello-framework"
+        property "sonar.organization", "ovidiocbba"
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
