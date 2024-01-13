@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Sat Jan 13 01:55:51 GMT 2024","Sat Jan 13 01:55:52 GMT 2024","660","","Workspace","","Verify that a workspace can be created","","Verify that a workspace can be created",""
+"broken","Sat Jan 13 01:55:52 GMT 2024","Sat Jan 13 01:55:53 GMT 2024","630","","Login","","Login successful","","Login successful",""
+"failed","Sat Jan 13 01:55:46 GMT 2024","Sat Jan 13 01:55:49 GMT 2024","3538","","List","","Verify that a list can be created in a Board","","Verify that a list can be created in a Board",""
+"failed","Sat Jan 13 01:55:49 GMT 2024","Sat Jan 13 01:55:51 GMT 2024","2140","","List","","Verify that a list can be archived","","Verify that a list can be archived",""
+"passed","Sat Jan 13 01:55:38 GMT 2024","Sat Jan 13 01:55:38 GMT 2024","82","","Workspace","","Verify that a Workspace can't be created with an empty display name","","Verify that a Workspace can't be created with an empty display name",""
+"passed","Sat Jan 13 01:55:27 GMT 2024","Sat Jan 13 01:55:31 GMT 2024","3743","","Board","","Verify that a board can be created in a workspace","","Verify that a board can be created in a workspace",""
+"passed","Sat Jan 13 01:55:31 GMT 2024","Sat Jan 13 01:55:33 GMT 2024","1847","","Board","","Create a new Board with one character for the name","","Create a new Board with one character for the name",""
