@@ -31,13 +31,13 @@ dependencies {
     // [OM] Allure dependencies.
     implementation group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: '2.24.0'
     // [OM] Cucumber dependencies.
-    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.14.0'
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.14.0'
+    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '6.11.0'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.11.0'
     testImplementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '6.11.0'
 }
 
 allure {
-    version = '2.13.9'
+    version = '2.24.0'
     resultsDir = file("${rootProject.rootDir}/build/allure/allure-results")
     reportDir = file("${rootProject.rootDir}/build/allure/allure-report")
 }
