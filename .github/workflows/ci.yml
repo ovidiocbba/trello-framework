@@ -17,8 +17,8 @@ on:
         required: false
         default: '@Regression'
 env:
-  JAVA_VERSION: 11
-  GRADLE_VERSION: 7.4
+  JAVA_VERSION: '11'
+  GRADLE_VERSION: '7.4'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
