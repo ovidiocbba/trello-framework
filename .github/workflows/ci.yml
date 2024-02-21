@@ -39,7 +39,7 @@ jobs:
         with:
           java-ver: ${{env.JAVA_VERSION}}
           java-distribution: 'temurin'
-          gradle-ver: ${{GRADLE_VERSION}}
+          gradle-ver: ${{env.GRADLE_VERSION}}
       - run: | 
               gradle assemble
               gradle assemble testClasses
@@ -60,7 +60,7 @@ jobs:
         with:
           java-ver: ${{env.JAVA_VERSION}}
           java-distribution: 'temurin'
-          gradle-ver: ${{GRADLE_VERSION}}
+          gradle-ver: ${{env.GRADLE_VERSION}}
       - run: gradle staticAnalysis
 
       - uses: actions/upload-artifact@v3
@@ -85,7 +85,7 @@ jobs:
         with:
           java-ver: ${{env.JAVA_VERSION}}
           java-distribution: 'temurin'
-          gradle-ver: ${{GRADLE_VERSION}}
+          gradle-ver: ${{env.GRADLE_VERSION}}
       - run: gradle javadoc
 
       - uses: actions/upload-artifact@v3
@@ -114,7 +114,7 @@ jobs:
         with:
           java-ver: ${{env.JAVA_VERSION}}
           java-distribution: 'temurin'
-          gradle-ver: ${{GRADLE_VERSION}}
+          gradle-ver: ${{env.GRADLE_VERSION}}
 
       # Get the test case tag from the branch name.
       # Eg.
