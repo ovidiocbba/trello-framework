@@ -16,6 +16,9 @@ on:
         type: string
         required: false
         default: '@Regression'
+env:
+  JAVA_VER: 11
+  GRADLE_VER: 7.4
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
@@ -34,9 +37,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: $GRADLE_VER
       - run: | 
               gradle assemble
               gradle assemble testClasses
@@ -55,9 +58,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: $GRADLE_VER
       - run: gradle staticAnalysis
 
       - uses: actions/upload-artifact@v3
@@ -80,9 +83,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: $GRADLE_VER
       - run: gradle javadoc
 
       - uses: actions/upload-artifact@v3
@@ -109,9 +112,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: $GRADLE_VER
 
       # Get the test case tag from the branch name.
       # Eg.

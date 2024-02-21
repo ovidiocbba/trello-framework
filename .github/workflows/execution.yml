@@ -35,9 +35,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: 11
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: 7.4
 
       - name: Execute Features
         uses: ./.github/actions/execute_features
