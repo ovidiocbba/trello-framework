@@ -1,8 +1,8 @@
 name: CI
 
 env:
-  JAVA_VERSION: '11'
-  GRADLE_VERSION: '7.4'
+  JAVA_VERSION: 11
+  GRADLE_VERSION: 7.4
 
 # Controls when the workflow will run.
 on:
