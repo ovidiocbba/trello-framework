@@ -64,7 +64,7 @@ jobs:
           gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: gradle staticAnalysis
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: staticAnalysisReports${{ github.run_id }}
           path: ./build/reports
@@ -89,7 +89,7 @@ jobs:
           gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: gradle javadoc
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: javadoc${{ github.run_id }}
           path: ./build/docs/javadoc
@@ -146,7 +146,7 @@ jobs:
       # Upload Allure report.
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allureReport${{ github.run_id }}
           path: ./build/allure
