@@ -2,6 +2,7 @@ package com.ovidiomiranda.framework.core.ui.driver;
 
 import com.ovidiomiranda.framework.core.utils.property.PropertiesInput;
 import com.ovidiomiranda.framework.core.utils.property.PropertiesManager;
+import java.time.Duration;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -26,8 +27,9 @@ public final class DriverManager {
         PropertiesManager.getInstance().getProperties(PropertiesInput.BROWSER));
     driver = DriverFactory.getDriverManager(driverType);
     maximize();
-    wait = new WebDriverWait(driver, Integer.parseInt(
-        PropertiesManager.getInstance().getProperties(PropertiesInput.EXPLICIT_WAIT)));
+    long timeOutInSeconds = Integer.parseInt(
+        PropertiesManager.getInstance().getProperties(PropertiesInput.EXPLICIT_WAIT));
+    wait = new WebDriverWait(driver, Duration.ofSeconds(timeOutInSeconds));
   }
 
   /**
