@@ -19,4 +19,3 @@ Feature: List
       And verifies response body should match with "list/archiveOrUnarchiveList.json" JSON schema
       And verifies the response contain the following values:
         | closed | true |
-
