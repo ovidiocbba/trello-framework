@@ -27,7 +27,7 @@ runs:
       # git push origin gh-pages
 
     - name: Get Allure history
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       continue-on-error: true
       with:
         ref: ${{ inputs.publish_name_branch }}
