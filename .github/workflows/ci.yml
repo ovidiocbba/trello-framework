@@ -1,5 +1,9 @@
 name: CI
 
+env:
+  JAVA_VERSION: '11'
+  GRADLE_VERSION: '7.4'
+
 # Controls when the workflow will run.
 on:
   # When creating a new pull request to the 'develop' branch.
@@ -16,9 +20,6 @@ on:
         type: string
         required: false
         default: '@Regression'
-env:
-  JAVA_VERSION: '11'
-  GRADLE_VERSION: '7.4'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
@@ -37,9 +38,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: ${{env.JAVA_VERSION}}
+          java-ver: ${{ env.JAVA_VERSION }}
           java-distribution: 'temurin'
-          gradle-ver: ${{env.GRADLE_VERSION}}
+          gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: | 
               gradle assemble
               gradle assemble testClasses
