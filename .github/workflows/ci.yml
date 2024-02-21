@@ -1,5 +1,9 @@
 name: CI
 
+env:
+  JAVA_VER: 11
+  GRADLE_VER: 7.4
+
 # Controls when the workflow will run.
 on:
   # When creating a new pull request to the 'develop' branch.
@@ -34,9 +38,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 11
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 7.4
+          gradle-ver: $GRADLE_VER
       - run: | 
               gradle assemble
               gradle assemble testClasses
@@ -55,9 +59,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 11
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 7.4
+          gradle-ver: $GRADLE_VER
       - run: gradle staticAnalysis
 
       - uses: actions/upload-artifact@v3
@@ -80,9 +84,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 11
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 7.4
+          gradle-ver: $GRADLE_VER
       - run: gradle javadoc
 
       - uses: actions/upload-artifact@v3
@@ -109,9 +113,9 @@ jobs:
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 11
+          java-ver: $JAVA_VER
           java-distribution: 'temurin'
-          gradle-ver: 7.4
+          gradle-ver: $GRADLE_VER
 
       # Get the test case tag from the branch name.
       # Eg.
