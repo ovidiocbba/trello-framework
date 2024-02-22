@@ -24,7 +24,7 @@ public class LoginPage extends BasePage {
   @FindBy(id = "user")
   private WebElement emailTextField;
 
-  @FindBy(css = "input[value=Continue]")
+  @FindBy(css = "#login.button")
   private WebElement continueButton;
 
   @FindBy(id = "password")

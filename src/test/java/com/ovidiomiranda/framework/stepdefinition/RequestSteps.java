@@ -90,7 +90,7 @@ public class RequestSteps {
    */
   @And("verifies the response body should be:")
   public void verifiesResponseBody(final String expectedResponseBody) {
-    Assert.assertEquals(response.getBody().asString(), expectedResponseBody);
+    Assert.assertEquals(response.body().prettyPrint(), expectedResponseBody);
   }
 
   /**

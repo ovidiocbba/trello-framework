@@ -11,22 +11,22 @@
     "closed": {
       "type": "boolean"
     },
+    "color": {
+      "type": "null"
+    },
     "idBoard": {
       "type": "string"
     },
     "pos": {
       "type": "integer"
-    },
-    "status": {
-      "type": "null"
     }
   },
   "required": [
     "id",
     "name",
     "closed",
+    "color",
     "idBoard",
-    "pos",
-    "status"
+    "pos"
   ]
 }

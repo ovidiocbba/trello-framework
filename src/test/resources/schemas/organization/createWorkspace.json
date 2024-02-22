@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "maxProperties": 14,
+  "maxProperties": 15,
   "properties": {
     "id": {
       "type": "string"
@@ -40,6 +40,9 @@
     "logoUrl": {
       "type": "null"
     },
+    "offering": {
+      "type": "string"
+    },
     "products": {
       "type": "array",
       "items": {}
@@ -66,6 +69,7 @@
     "teamType",
     "logoHash",
     "logoUrl",
+    "offering",
     "products",
     "powerUps",
     "idMemberCreator",
