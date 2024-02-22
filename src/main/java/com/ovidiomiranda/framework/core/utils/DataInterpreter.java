@@ -43,7 +43,7 @@ public final class DataInterpreter {
    * @return the key value.
    */
   public static String getValueFromContext(final String text, final Context context) {
-    final String regexBracketsInside = "(?<=\\[)(.*?)(?=])";
+    final String regexBracketsInside = "\\[(.*?)]";
     Pattern pattern = Pattern.compile(regexBracketsInside);
     Matcher matcher = pattern.matcher(text);
     if (matcher.find()) {
