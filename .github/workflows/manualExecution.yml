@@ -52,14 +52,14 @@ jobs:
     steps:
       # Cloning you repository to the runner.
       - name: Checkout code
-        uses: actions/checkout@v3 # Necessary to access local action.
+        uses: actions/checkout@v4 # Necessary to access local action.
 
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver: 11
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: 7.4
 
       - name: Execute Features
         uses: ./.github/actions/execute_features
@@ -76,6 +76,6 @@ jobs:
         if: always()
         uses: ./.github/actions/deploy_allure_report
         with:
-          allure_results_path: ./build/allure/allure-results
+          allure_results_path: ./build/allure-results
           publish_name_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}

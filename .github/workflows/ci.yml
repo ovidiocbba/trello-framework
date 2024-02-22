@@ -1,5 +1,9 @@
 name: CI
 
+env:
+  JAVA_VERSION: 11
+  GRADLE_VERSION: 7.6.4
+
 # Controls when the workflow will run.
 on:
   # When creating a new pull request to the 'develop' branch.
@@ -29,14 +33,14 @@ jobs:
     steps:
       # Cloning you repository to the runner.
       - name: Checkout code
-        uses: actions/checkout@v3 # Necessary to access local action.
+        uses: actions/checkout@v4 # Necessary to access local action.
 
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver:  ${{ env.JAVA_VERSION }}
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: | 
               gradle assemble
               gradle assemble testClasses
@@ -50,17 +54,17 @@ jobs:
     steps:
       # Cloning you repository to the runner.
       - name: Checkout code
-        uses: actions/checkout@v3 # Necessary to access local action.
+        uses: actions/checkout@v4 # Necessary to access local action.
 
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver:  ${{ env.JAVA_VERSION }}
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: gradle staticAnalysis
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: staticAnalysisReports${{ github.run_id }}
           path: ./build/reports
@@ -75,17 +79,17 @@ jobs:
     steps:
       # Cloning you repository to the runner.
       - name: Checkout code
-        uses: actions/checkout@v3 # Necessary to access local action.
+        uses: actions/checkout@v4 # Necessary to access local action.
 
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver:  ${{ env.JAVA_VERSION }}
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: ${{ env.GRADLE_VERSION }}
       - run: gradle javadoc
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: javadoc${{ github.run_id }}
           path: ./build/docs/javadoc
@@ -104,14 +108,14 @@ jobs:
     steps:
       # Cloning you repository to the runner.
       - name: Checkout code
-        uses: actions/checkout@v3 # Necessary to access local action.
+        uses: actions/checkout@v4 # Necessary to access local action.
 
       - name: Installing the environment
         uses: ./.github/actions/install_environment
         with:
-          java-ver: 8
+          java-ver:  ${{ env.JAVA_VERSION }}
           java-distribution: 'temurin'
-          gradle-ver: 6.9
+          gradle-ver: ${{ env.GRADLE_VERSION }}
 
       # Get the test case tag from the branch name.
       # Eg.
@@ -142,10 +146,10 @@ jobs:
       # Upload Allure report.
       - name: Upload report
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: allureReport${{ github.run_id }}
-          path: ./build/allure
+          path: ./build/allure-results
           retention-days: 5
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`.
 
