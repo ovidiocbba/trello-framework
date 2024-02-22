@@ -1,13 +1,13 @@
 plugins {
     id 'java'
     id 'io.qameta.allure' version '2.11.0'
-    id "org.sonarqube" version "4.4.1.3373"
+    id 'org.sonarqube' version '4.4.1.3373'
 }
 
 // [OM] Apply the java plugin to add support for Java.
 apply plugin: 'idea'
 apply plugin: 'io.qameta.allure'
-apply plugin: "org.sonarqube"
+apply plugin: 'org.sonarqube'
 apply from: 'tasks.gradle'
 apply from: 'code-quality-plugins.gradle'
 
