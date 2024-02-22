@@ -149,7 +149,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allureReport${{ github.run_id }}
-          path: ./build/allure
+          path: ./build/allure-results
           retention-days: 5
           if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`.
 

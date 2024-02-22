@@ -4,7 +4,7 @@ description: 'Execute features and rerun'
 # Inputs the action accepts.
 inputs:
   allure_results_path:
-    description: 'Allure results path: ./build/allure/allure-results'
+    description: 'Allure results path: ./build/allure-results'
     required: true
   publish_name_branch:
     description: 'Publish branch: gh-pages'

@@ -11,8 +11,7 @@ import org.testng.annotations.AfterClass;
 /**
  * Initial configurations.
  *
- * <p> We need to create a class called TestRunner class to run the tests. This class will use the
- * TestNG annotation @Test, which tells TestNG what is the test runner class.
+ * <p> We need to create a class called TestRunner class to run the tests.
  */
 @CucumberOptions(glue = {"com.ovidiomiranda.framework"}, features = {
     "src/test/resources/features"}, plugin = {"pretty",
