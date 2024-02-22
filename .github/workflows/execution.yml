@@ -54,6 +54,6 @@ jobs:
         if: always()
         uses: ./.github/actions/deploy_allure_report
         with:
-          allure_results_path: ./build/allure/allure-results
+          allure_results_path: ./build/allure-results
           publish_name_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}

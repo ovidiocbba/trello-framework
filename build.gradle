@@ -7,6 +7,7 @@ plugins {
 // [OM] Apply the java plugin to add support for Java.
 apply plugin: 'idea'
 apply plugin: 'io.qameta.allure'
+apply plugin: "org.sonarqube"
 apply from: 'tasks.gradle'
 apply from: 'code-quality-plugins.gradle'
 
