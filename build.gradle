@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'io.qameta.allure' version '2.8.1'
+    id 'io.qameta.allure' version '2.11.0'
     id "org.sonarqube" version "3.5.0.2730"
 }
 
@@ -14,6 +14,7 @@ group 'com.ovidiomiranda'
 version '1.0.0'
 
 repositories {
+    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
@@ -29,17 +30,21 @@ dependencies {
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.22.1'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.1'
     // [OM] Allure dependencies.
-    implementation group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: '2.24.0'
+    // Import allure-bom to ensure correct versions of all the dependencies are used.
+    implementation group: 'io.qameta.allure', name: 'allure-bom', version: '2.24.0'
+    // Add necessary Allure dependencies to dependencies section.
+    implementation group: 'io.qameta.allure', name: 'allure-cucumber7-jvm', version: '2.19.0'
+    implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.24.0'
     // [OM] Cucumber dependencies.
-    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '6.11.0'
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.11.0'
-    testImplementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '6.11.0'
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.6.0'
+    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.6.0'
+    testImplementation group: 'io.cucumber', name: 'cucumber-picocontainer', version: '7.6.0'
+    // [OM] TestNG.
+    //testImplementation 'org.testng:testng:7.6.0'
 }
 
 allure {
-    version = '2.24.0'
-    resultsDir = file("${rootProject.rootDir}/build/allure/allure-results")
-    reportDir = file("${rootProject.rootDir}/build/allure/allure-report")
+    version = '2.8.0'
 }
 
 sonarqube {
