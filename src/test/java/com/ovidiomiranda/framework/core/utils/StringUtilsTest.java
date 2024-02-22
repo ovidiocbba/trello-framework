@@ -1,5 +1,4 @@
-package com.ovidiomiranda.framework.utils;
-
+package com.ovidiomiranda.framework.core.utils;
 
 import static com.ovidiomiranda.framework.core.utils.Messages.VALUES_ARE_NOT_EQUAL;
 import static com.ovidiomiranda.framework.core.utils.StringUtils.deleteLastCharacter;
