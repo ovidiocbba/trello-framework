@@ -7,7 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriverException;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
 
 /**
  * Initial configurations.
@@ -15,7 +14,6 @@ import org.testng.annotations.Test;
  * <p> We need to create a class called TestRunner class to run the tests. This class will use the
  * TestNG annotation @Test, which tells TestNG what is the test runner class.
  */
-@Test
 @CucumberOptions(glue = {"com.ovidiomiranda.framework"}, features = {
     "src/test/resources/features"}, plugin = {"pretty",
     "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm", "rerun:build/target/rerun.txt"})
