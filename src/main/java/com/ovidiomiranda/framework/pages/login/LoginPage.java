@@ -21,10 +21,10 @@ public class LoginPage extends BasePage {
   private static final Logger LOGGER = LogManager.getLogger(LoginPage.class);
   public static final String BASE_URL = PropertiesManager.getInstance().getBaseUrl();
   public static final String LOGIN_URL = BASE_URL + "/login";
-  @FindBy(id = "user")
+  @FindBy(id = "username")
   private WebElement emailTextField;
 
-  @FindBy(css = "#login.button")
+  @FindBy(id = "login-submit")
   private WebElement continueButton;
 
   @FindBy(id = "password")
