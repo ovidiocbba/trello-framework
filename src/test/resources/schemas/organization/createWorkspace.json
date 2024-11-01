@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "maxProperties": 16,
+  "maxProperties": 15,
   "properties": {
     "id": {
       "type": "string"
@@ -51,9 +51,6 @@
       "type": "array",
       "items": {}
     },
-    "reverseTrialTag": {
-      "type": "null"
-    },
     "idMemberCreator": {
       "type": "string"
     },
@@ -75,7 +72,6 @@
     "offering",
     "products",
     "powerUps",
-    "reverseTrialTag",
     "idMemberCreator",
     "limits"
   ]

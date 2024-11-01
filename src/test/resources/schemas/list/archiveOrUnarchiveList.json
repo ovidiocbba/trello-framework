@@ -1,6 +1,6 @@
 {
   "type": "object",
-  "maxProperties": 6,
+  "maxProperties": 8,
   "properties": {
     "id": {
       "type": "string"
@@ -19,6 +19,20 @@
     },
     "pos": {
       "type": "integer"
+    },
+    "type": {
+      "type": "null"
+    },
+    "datasource": {
+      "type": "object",
+      "properties": {
+        "filter": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "filter"
+      ]
     }
   },
   "required": [
@@ -27,6 +41,8 @@
     "closed",
     "color",
     "idBoard",
-    "pos"
+    "pos",
+    "type",
+    "datasource"
   ]
 }
