@@ -12,11 +12,11 @@ on:
         required: false
         default: '@Regression'
 
-  schedule:
-    # Scheduled the execution.
-    # Every friday at 21:00 PM (Bolivia).
-    # All the cron job in GitHub Actions is in UTC.
-    - cron: '0 1 * * 6'
+#  schedule:
+#    # Scheduled the execution.
+#    # Every friday at 21:00 PM (Bolivia).
+#    # All the cron job in GitHub Actions is in UTC.
+#    - cron: '0 1 * * 6'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel.
 jobs:
